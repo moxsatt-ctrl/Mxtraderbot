@@ -493,3 +493,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+# ======================
+# MINI SERVIDOR HTTP (Render Free)
+# ======================
+from flask import Flask
+import threading
+import os
+
+def run_web():
+    app = Flask(__name__)
+
+    @app.route("/")
+    def home():
+        return "Bot activo OK", 200
+
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+threading.Thread(target=run_web, daemon=True).start()
