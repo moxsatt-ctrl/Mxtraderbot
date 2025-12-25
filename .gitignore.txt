@@ -1,0 +1,6 @@
+.env
+signals.csv
+signals_old.csv
+__pycache__/
+.venv/
+*.log
