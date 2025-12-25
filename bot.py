@@ -491,8 +491,7 @@ def main():
     app.add_error_handler(error_handler)
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
-if __name__ == "__main__":
-    main()
+
 # ======================
 # MINI SERVIDOR HTTP (Render Free)
 # ======================
@@ -511,3 +510,6 @@ def run_web():
     app.run(host="0.0.0.0", port=port)
 
 threading.Thread(target=run_web, daemon=True).start()
+
+if __name__ == "__main__":
+    main()
